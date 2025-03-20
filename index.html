@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DANAReward</title>
+    <title>WorksDanaAds</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -288,7 +288,7 @@
         </div>
         <div class="balance-card">
             <h3>Balance</h3>
-            <h2>Rp<span id="balance">0.000</span></h2>
+            <h2>Rp<span id="balance">0.00</span></h2>
         </div>
     </div>
 
@@ -298,7 +298,7 @@
     <!-- Bottom Navigation -->
     <div class="bottom-nav">
         <a href="#"><i class="fas fa-home"></i>Home</a>
-        <a href="https://t.me/share/url?url=https://t.me/@SaldoDanaAds_Bot"><i class="fas fa-share-alt"></i>Share</a>
+        <a href="https://t.me/share/url?url=https://t.me/SaldoDanaAds_Bot"><i class="fas fa-share-alt"></i>Share</a>
         <a href="https://t.me/ChatAdmin0001" target="_blank"><i class="fas fa-user-tie"></i>Withdraw</a>
     </div>
 
@@ -326,10 +326,10 @@
 
         // Load Saved Data
         let rewardCount = parseInt(localStorage.getItem('rewardCount')) || 0;  
-        let balance = parseFloat(localStorage.getItem('balance')) || 0.000;  
+        let balance = parseFloat(localStorage.getItem('balance')) || 0.00;  
 
         document.getElementById('reward-count').textContent = rewardCount;
-        document.getElementById('balance').textContent = balance.toFixed(2);
+        document.getElementById('balance').textContent = balance.toFixed(3);
 
         function showRewardedAd() {
             if (typeof show_9104375 === 'function') {
@@ -338,10 +338,10 @@
                     balance += 0.005;  
 
                     localStorage.setItem('rewardCount', rewardCount);
-                    localStorage.setItem('balance', balance.toFixed(2));
+                    localStorage.setItem('balance', balance.toFixed(3));
 
                     document.getElementById('reward-count').textContent = rewardCount;
-                    document.getElementById('balance').textContent = balance.toFixed(2);
+                    document.getElementById('balance').textContent = balance.toFixed(3);
 
                     //alert("Ad Completed! You Earned Rp0.005!");
                 }).catch(error => {
